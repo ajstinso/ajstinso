@@ -1,0 +1,127 @@
+html, body {
+	background-color: #4ACB48;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+
+#userInput {
+	display: none;
+	z-index: 999;
+}
+
+#canvas {
+	height: 80%;
+	width: 80%;
+	position: relative;
+	float: right;
+	/*border-style: groove;
+	border-width: 5px;*/
+	margin-top: 20px;
+	margin-right: 10px;
+}
+
+#newFlower {
+	width: auto;
+	margin-left: 20px;
+	margin-top: 10px;
+	border-width: 2px;
+	border-color: #48CBC1;
+	cursor: pointer;
+}
+
+#newFlower:hover {
+	background-color: #48CBC9;
+}
+
+#demo {
+	z-index: 999;
+	width: 18%;
+	height: 30%;
+	margin-top: 2%;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+
+.button {
+	margin-left: 2px;
+}
+
+.num1 {
+	margin: 3%;
+}
+
+.num2 {
+	margin: 3%;
+}
+
+.num3 {
+	margin: 3%;
+}
+
+.num4 {
+	margin: 3%;
+}
+
+label {
+	
+}
+
+#name {
+	float: right;
+	margin: 0px;
+}
+
+#mail {
+	float: right;
+	display: inline-block;
+}
+
+#dob {
+	float: right;
+}
+
+#msg {
+	float: right;
+}
+
+
+#flowerImage {
+	display: none;	
+}
+
+.flowerDisplay {
+	height: 7%;
+	width: 2.5%;
+	padding: 0px;
+	border-spacing: 0px;
+	margin-bottom: 7%;
+	margin-right: 7%;
+}
+
+.innerBox {
+	display: none;	
+	position: absolute;
+	height: 100px;
+	width: 100px;
+}
+
+.flowerDisplay:hover {
+	height: 12%;
+	width: 5%;
+	cursor: pointer;
+	z-index: 0;
+}
+
+.flowerDisplay:hover + .innerBox {
+	display: block;
+	border-style: groove;
+	border-width: 2px;
+	height: 100px;
+	width: 200px;
+	z-index: 999; 
+	background-color: #B6B6B4;
+	cursor: default;
+}

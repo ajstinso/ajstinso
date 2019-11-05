@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="workingOct29.css" />
+	</head>
+	<body>
+		<input type="button" id="newFlower" value="Click to create new flower" onclick="findForm()" />
+		
+		<form action="/userInfo" method="post" id="userInput">
+			<div>
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="user_name">
+			</div>
+			<div>
+				<label for="mail">E-mail:</label>
+				<input type="email" id="mail" name="user_mail">
+			</div>
+			<div>
+				<label for="age">Age:</label>
+				<input type="date" id="dob" name="user_date_of_ birth">
+			</div>
+			<div>
+				<label for="msg">Message:</label>
+				<textarea id="msg" name="user_message"></textarea>
+			</div>
+			<div class="button">
+				<button onclick="flower()" type="submit">Click to create a new flower</button>
+			</div>
+		</form>
+		
+		<p id="demo"></p>
+		
+		<p id="test"></p>
+		
+		<script>
+				function findForm() {
+					var x = document.forms.namedItem("userInput").innerHTML;
+					document.getElementById("demo").innerHTML = x;
+				}
+		
+				function getRandomPosition(element) {
+					var x = document.body.offsetHeight-element.clientHeight;
+					var y = document.body.offsetWidth-element.clientWidth;
+					var randomX = Math.floor(Math.random()*x);
+					var randomY = Math.floor(Math.random()*y);
+					return [randomX,randomY];
+				}
+				function flower() {
+				
+					var img = document.createElement('img');
+					img.setAttribute("style", "position:absolute;");
+					img.setAttribute("src", "BasicFlower.png");
+					img.setAttribute("class", "flowerDisplay");
+					
+					var textBox = document.createElement('div');
+					textBox.setAttribute("class", "innerBox");
+					textBox.innerHTML = "Hello";
+					img.appendChild(textBox);
+					
+					document.body.appendChild(img);
+					var xy = getRandomPosition(img);
+					img.style.top = xy[0] + 'px';
+					img.style.left = xy[1] + 'px';
+					
+					var y = document.getElementById("test").innerHTML;
+					document.getElementById("demo").innerHTML = y;
+				}
+		</script>
+
+
+	</body>
+</html>
+
